@@ -1,7 +1,9 @@
 const projectsData = [
   {
     title: 'Kriva Storefront',
-    description: `Over the past year, I designed and implemented a Shopify storefront for the Kriva brand of CBDA products.`,
+    description: `Over the past year, I redesigned a Shopify storefront for the Kriva brand 
+    of CBDA products. The result was an overhauled user experience that was accessible and performative,
+    and used a CMS to deliver SEO-optimized educational articles.`,
     imgSrc: '/static/images/kriva-cover.png',
     href: 'https://www.kriva.co',
   },

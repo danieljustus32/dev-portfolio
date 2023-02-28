@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'BLOG TITLE',
+  title: 'Daniel Justus',
   author: 'Daniel Justus',
-  headerTitle: 'BLOG TITLE',
+  headerTitle: 'Daniel Justus',
   description: "Daniel Justus' blog and portfolio",
   language: 'en-us',
   theme: 'system', // system, dark or light
