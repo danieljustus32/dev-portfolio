@@ -1,14 +1,12 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Kriva Storefront',
+    description: `Over the past year, I designed and implemented a Shopify storefront for the Kriva brand of CBDA products.`,
+    imgSrc: '/static/images/kriva-cover.png',
+    href: 'https://www.kriva.co',
   },
   {
-    title: 'The Time Machine',
+    title: 'Implementing ML with Pytorch',
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
