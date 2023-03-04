@@ -31,6 +31,6 @@ input:-webkit-autofill:focus {
 
 @screen md {
   .logo {
-    width: 192px;
+    width: 96px;
   }
 }
