@@ -35,10 +35,10 @@ const LayoutWrapper = ({ children }) => {
 
   useEffect(() => {
     if (scrollY > 200) {
-      document.getElementById("navbar").classList.add("lg:scale-75")
+      document.getElementById("navbar").classList.add("md:scale-75")
     }
     else {
-      document.getElementById("navbar").classList.remove("lg:scale-75")
+      document.getElementById("navbar").classList.remove("md:scale-75")
     }
   }, [scrollY])
 
