@@ -17,57 +17,63 @@ const LayoutWrapper = ({ children }) => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY)
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
 
-        // just trigger this so that the initial state 
+    // just trigger this so that the initial state
     // is updated as soon as the component is mounted
     // related: https://stackoverflow.com/a/63408216
-    handleScroll();
+    handleScroll()
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    };
+      window.removeEventListener('scroll', handleScroll)
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollY])
 
   useEffect(() => {
     if (scrollY > 200) {
-      document.getElementById("navbar").classList.remove("md:py-10")
-      document.getElementById("navbar").classList.add("md:py-2")
-      Array.from(document.getElementsByClassName("shrink")).forEach(
-        function(element, index, array) {
-            element.classList.remove("md:scale-100")
-            element.classList.add("md:scale-75")
-        }
-      )    
+      document.getElementById('navbar').classList.remove('md:py-10')
+      document.getElementById('navbar').classList.add('md:py-2')
+      Array.from(document.getElementsByClassName('shrink')).forEach(function (
+        element,
+        index,
+        array
+      ) {
+        element.classList.remove('md:scale-100')
+        element.classList.add('md:scale-75')
+      })
+    } else {
+      document.getElementById('navbar').classList.remove('md:py-2')
+      document.getElementById('navbar').classList.add('md:py-10')
+      Array.from(document.getElementsByClassName('shrink')).forEach(function (
+        element,
+        index,
+        array
+      ) {
+        element.classList.remove('md:scale-75')
+        element.classList.add('md:scale-100')
+      })
     }
-    else {
-      document.getElementById("navbar").classList.remove("md:py-2")
-      document.getElementById("navbar").classList.add("md:py-10")
-      Array.from(document.getElementsByClassName("shrink")).forEach(
-        function(element, index, array) {
-            element.classList.remove("md:scale-75")
-            element.classList.add("md:scale-100")
-          }
-        )
-      }
   }, [scrollY])
 
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
-        <header className="fixed backdrop-blur z-50 left-0 top-0 w-screen px-12 flex items-center justify-between py-10 w-1/2 transition-all" id="navbar">
+        <header
+          className="fixed left-0 top-0 z-50 flex w-screen w-1/2 items-center justify-between px-12 py-10 backdrop-blur transition-all"
+          id="navbar"
+        >
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between shrink">
+              <div className="flex shrink items-center justify-between">
                 <div className="logo mr-3 transition-all">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block shrink">
+                  <div className="hidden h-6 shrink text-2xl font-semibold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
@@ -77,7 +83,7 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block shrink">
+            <div className="hidden shrink">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
