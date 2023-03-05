@@ -35,25 +35,39 @@ const LayoutWrapper = ({ children }) => {
 
   useEffect(() => {
     if (scrollY > 200) {
-      document.getElementById("navbar").classList.add("md:scale-75")
+      document.getElementById("navbar").classList.remove("md:py-10")
+      document.getElementById("navbar").classList.add("md:py-2")
+      Array.from(document.getElementsByClassName("shrink")).forEach(
+        function(element, index, array) {
+            element.classList.remove("md:scale-100")
+            element.classList.add("md:scale-75")
+        }
+      )    
     }
     else {
-      document.getElementById("navbar").classList.remove("md:scale-75")
-    }
+      document.getElementById("navbar").classList.remove("md:py-2")
+      document.getElementById("navbar").classList.add("md:py-10")
+      Array.from(document.getElementsByClassName("shrink")).forEach(
+        function(element, index, array) {
+            element.classList.remove("md:scale-75")
+            element.classList.add("md:scale-100")
+          }
+        )
+      }
   }, [scrollY])
 
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
-        <header className="fixed z-50 left-0 w-screen px-12 flex items-center justify-between py-10 w-1/2 transition-all" id="navbar">
+        <header className="fixed backdrop-blur z-50 left-0 top-0 w-screen px-12 flex items-center justify-between py-10 w-1/2 transition-all" id="navbar">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <div className="logo mr-3">
+              <div className="flex items-center justify-between shrink">
+                <div className="logo mr-3 transition-all">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
+                  <div className="hidden h-6 text-2xl font-semibold sm:block shrink">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
@@ -63,7 +77,7 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
+            <div className="hidden sm:block shrink">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
@@ -78,7 +92,7 @@ const LayoutWrapper = ({ children }) => {
             <MobileNav />
           </div>
         </header>
-        <main className="mb-auto mt-36">{children}</main>
+        <main className="mb-auto mt-48">{children}</main>
         <Footer />
       </div>
     </SectionContainer>
