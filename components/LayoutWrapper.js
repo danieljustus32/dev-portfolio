@@ -42,7 +42,7 @@ const LayoutWrapper = ({ children }) => {
         array
       ) {
         navbar.classList.remove('py-10')
-        navbar.classList.add('py-2')
+        navbar.classList.add('py-1')
         element.classList.remove('md:scale-100')
         element.classList.add('md:scale-75')
       })
@@ -53,7 +53,7 @@ const LayoutWrapper = ({ children }) => {
         array
       ) {
         navbar.classList.add('py-10')
-        navbar.classList.remove('py-2')
+        navbar.classList.remove('py-1')
         element.classList.remove('md:scale-75')
         element.classList.add('md:scale-100')
       })
@@ -99,7 +99,7 @@ const LayoutWrapper = ({ children }) => {
             <MobileNav />
           </div>
         </header>
-        <main className="mb-auto mt-48">{children}</main>
+        <main className="mb-auto mt-56">{children}</main>
         <Footer />
       </div>
     </SectionContainer>
