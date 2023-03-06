@@ -1097,6 +1097,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.2.tgz#f21a1b39e9fc40fd7f315f37687ad6f6f040528a"
   integrity sha512-4LLfZYr5dRsobtC9JNkATL5OwOqrxs2tF29eNljjogxWXm4tlHxRo4dgOFTlWxQOxcj5Zv7dM8IMiSoOqMGy3g==
 
+"@fontsource/vollkorn@^4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/vollkorn/-/vollkorn-4.5.14.tgz#a7d097fda43b1423d732ed23e9ad9a3600cbaeab"
+  integrity sha512-pzHiWJx0Pki6k9O4C707KRcrptqGwAzumArvk9ku8a5H5Z4aecDdshcalNLCou2A81hyCjSiAyFUH4MUpacAvA==
+
 "@fullpage/react-fullpage@^0.1.34":
   version "0.1.34"
   resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.34.tgz#e4252b21443977f664b648556aa5a07e177699a4"
