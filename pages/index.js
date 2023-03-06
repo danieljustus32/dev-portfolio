@@ -28,7 +28,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       {/*// TODO - add react-fullpage*/}
-      <div className="fixed top-0 left-0 min-h-screen">
+      <div className="fullpage-viewport">
         <ReactFullpage
           //fullpage options
           licenseKey="0MK6J-V4N58-38HAJ-2VL78-SNZNP"
@@ -36,7 +36,7 @@ export default function Home({ posts }) {
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section active h-screen w-screen bg-violet-500">
+                <div className="section active h-screen w-screen bg-pink-100 dark:bg-violet-500">
                   <p>Section 1 (welcome to fullpage.js)</p>
                   <button onClick={() => fullpageApi.moveSectionDown()}>
                     Click me to move down
