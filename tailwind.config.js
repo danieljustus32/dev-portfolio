@@ -26,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        serif: ['Vollkorn', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         primary: {
