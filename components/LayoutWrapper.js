@@ -74,7 +74,7 @@ const LayoutWrapper = ({ children }) => {
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 shrink text-2xl font-semibold sm:block">
+                  <div className="hidden h-6 shrink text-2xl ml-5 font-semibold md:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
@@ -84,7 +84,7 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="shrink">
+            <div className="hidden sm:flex shrink">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
