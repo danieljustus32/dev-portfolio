@@ -36,25 +36,27 @@ export default function Home({ posts }) {
           responsiveWidth={768}
           render={({ state, fullpageApi }) => {
             return (
-              <ReactFullpage.Wrapper>
-                <div className="section active slide-one h-screen w-screen bg-gray-900">
-                  <p>Section 1 (welcome to fullpage.js)</p>
-                  <button onClick={() => fullpageApi.moveSectionDown()}>
-                    Click me to move down
-                  </button>
-                </div>
-                <div className="section slide-two h-screen bg-gray-900">
-                  <p>Section 2</p>
-                </div>
-                <div className="section slide-three h-screen bg-gray-900">
-                  <p>Section 3</p>
-                  {siteMetadata.newsletter.provider !== '' && (
-                    <div className="flex items-center justify-center pt-4">
-                      <NewsletterForm />
+              <>
+                <ReactFullpage.Wrapper>
+                  <div className="section active slide-one h-screen w-screen bg-gray-900">
+                    <div className="rounded-md border border-gray-800 py-8 px-4 opacity-75 backdrop-blur">
+                      <h1 className="text-6xl">My name is Daniel</h1>
+                      <p>Some about me copy</p>
                     </div>
-                  )}
-                </div>
-              </ReactFullpage.Wrapper>
+                  </div>
+                  <div className="section slide-two h-screen bg-gray-900">
+                    <p>Section 2</p>
+                  </div>
+                  <div className="section slide-three h-screen bg-gray-900">
+                    <p>Section 3</p>
+                    {siteMetadata.newsletter.provider !== '' && (
+                      <div className="flex items-center justify-center pt-4">
+                        <NewsletterForm />
+                      </div>
+                    )}
+                  </div>
+                </ReactFullpage.Wrapper>
+              </>
             )
           }}
         />
