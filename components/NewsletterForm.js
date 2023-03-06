@@ -24,19 +24,21 @@ const NewsletterForm = ({ title = 'Get notified when I post new content!' }) => 
     const { error } = await res.json()
     if (error) {
       setError(true)
-      setMessage('Either your email address is invalid, or you\'re already subscribed.')
+      setMessage("Either your email address is invalid, or you're already subscribed.")
       return
     }
 
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('Successfully! 🎉 You are now subscribed.')
+    setMessage('Success! You are now subscribed.')
   }
 
   return (
     <div>
-      <div className="pb-1 text-lg text-center mb-2 font-semibold text-gray-800 dark:text-gray-100">{title}</div>
+      <div className="mb-2 pb-1 text-center text-lg font-semibold text-gray-800 dark:text-gray-100">
+        {title}
+      </div>
       <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
@@ -47,7 +49,7 @@ const NewsletterForm = ({ title = 'Get notified when I post new content!' }) => 
             className="w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
             id="email-input"
             name="email"
-            placeholder={subscribed ? "Thanks for subscribing!" : 'Enter your email'}
+            placeholder={subscribed ? 'Thanks for subscribing!' : 'Enter your email'}
             ref={inputEl}
             required
             type="email"

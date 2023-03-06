@@ -47,6 +47,11 @@ export default function Home({ posts }) {
                 </div>
                 <div className="section h-screen bg-green-500">
                   <p>Section 3</p>
+                  {siteMetadata.newsletter.provider !== '' && (
+                    <div className="flex items-center justify-center pt-4">
+                      <NewsletterForm />
+                    </div>
+                  )}
                 </div>
               </ReactFullpage.Wrapper>
             )
