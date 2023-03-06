@@ -70,7 +70,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex shrink items-center justify-between">
-                <div className="logo mr-3 transition-all">
+                <div className="logo mr-8 transition-all">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (

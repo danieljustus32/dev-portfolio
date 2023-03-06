@@ -37,16 +37,16 @@ export default function Home({ posts }) {
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section active slide-one h-screen w-screen bg-violet-500">
+                <div className="section active slide-one h-screen w-screen bg-gray-900">
                   <p>Section 1 (welcome to fullpage.js)</p>
                   <button onClick={() => fullpageApi.moveSectionDown()}>
                     Click me to move down
                   </button>
                 </div>
-                <div className="section slide-two h-screen">
+                <div className="section slide-two h-screen bg-gray-900">
                   <p>Section 2</p>
                 </div>
-                <div className="section slide-three h-screen bg-green-500">
+                <div className="section slide-three h-screen bg-gray-900">
                   <p>Section 3</p>
                   {siteMetadata.newsletter.provider !== '' && (
                     <div className="flex items-center justify-center pt-4">
