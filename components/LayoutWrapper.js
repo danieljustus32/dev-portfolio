@@ -64,7 +64,7 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header
-          className="fixed left-0 top-0 z-50 border-b border-zinc-800 flex w-screen items-center justify-between px-12 py-10 backdrop-blur transition-all"
+          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between border-b border-zinc-800 px-12 py-10 backdrop-blur transition-all"
           id="navbar"
         >
           <div>
@@ -74,7 +74,7 @@ const LayoutWrapper = ({ children }) => {
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 shrink text-2xl ml-5 font-semibold md:block">
+                  <div className="ml-5 hidden h-6 shrink text-2xl font-semibold md:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
@@ -84,7 +84,7 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:flex shrink">
+            <div className="hidden shrink sm:flex">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
@@ -99,7 +99,7 @@ const LayoutWrapper = ({ children }) => {
             <MobileNav />
           </div>
         </header>
-        <main className="mb-auto mt-56">{children}</main>
+        <main className="mb-auto">{children}</main>
         <Footer />
       </div>
     </SectionContainer>
