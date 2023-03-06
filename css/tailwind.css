@@ -45,3 +45,32 @@ input:-webkit-autofill:focus {
   justify-content: center;
   align-items: center;
 }
+
+.slide-one {
+  background-image: url('../public/static/images/slides/subway.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-two {
+  background-image: url('../public/static/images/slides/train.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-three {
+  background-image: url('../public/static/images/slides/android.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fullpage-viewport {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.section {
+  justify-content: center;
+  align-items: center;
+}
