@@ -42,6 +42,7 @@ const LayoutWrapper = ({ children }) => {
         array
       ) {
         navbar.classList.remove('py-10')
+        navbar.classList.add('py-2')
         element.classList.remove('md:scale-100')
         element.classList.add('md:scale-75')
       })
@@ -52,6 +53,7 @@ const LayoutWrapper = ({ children }) => {
         array
       ) {
         navbar.classList.add('py-10')
+        navbar.classList.remove('py-2')
         element.classList.remove('md:scale-75')
         element.classList.add('md:scale-100')
       })
@@ -62,7 +64,7 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header
-          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between px-12 py-10 backdrop-blur transition-all"
+          className="fixed left-0 top-0 z-50 border-b border-zinc-800 flex w-screen items-center justify-between px-12 py-10 backdrop-blur transition-all"
           id="navbar"
         >
           <div>
