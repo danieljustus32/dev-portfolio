@@ -32,20 +32,21 @@ export default function Home({ posts }) {
         <ReactFullpage
           //fullpage options
           licenseKey="0MK6J-V4N58-38HAJ-2VL78-SNZNP"
+          credits={{ enabled: false }}
           pluginWrapper={pluginWrapper}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section active h-screen w-screen bg-violet-500">
+                <div className="section active slide-one h-screen w-screen bg-violet-500">
                   <p>Section 1 (welcome to fullpage.js)</p>
                   <button onClick={() => fullpageApi.moveSectionDown()}>
                     Click me to move down
                   </button>
                 </div>
-                <div className="section h-screen bg-orange-500">
+                <div className="section slide-two h-screen">
                   <p>Section 2</p>
                 </div>
-                <div className="section h-screen bg-green-500">
+                <div className="section slide-three h-screen bg-green-500">
                   <p>Section 3</p>
                   {siteMetadata.newsletter.provider !== '' && (
                     <div className="flex items-center justify-center pt-4">
