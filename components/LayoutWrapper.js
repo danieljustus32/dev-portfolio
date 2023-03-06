@@ -35,7 +35,7 @@ const LayoutWrapper = ({ children }) => {
 
   useEffect(() => {
     let navbar = document.getElementById('navbar')
-    if (scrollY > 100) {
+    if (scrollY > 50) {
       Array.from(document.getElementsByClassName('shrink')).forEach(function (
         element,
         index,
@@ -52,8 +52,8 @@ const LayoutWrapper = ({ children }) => {
         index,
         array
       ) {
-        navbar.classList.add('py-10')
         navbar.classList.remove('py-1')
+        navbar.classList.add('py-10')
         element.classList.remove('md:scale-75')
         element.classList.add('md:scale-100')
       })
@@ -64,7 +64,7 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header
-          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between border-b border-zinc-800 px-12 py-10 backdrop-blur transition-all"
+          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between border-b border-zinc-800 px-12 backdrop-blur transition-all"
           id="navbar"
         >
           <div>
