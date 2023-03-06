@@ -28,8 +28,19 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.indigo,
-        gray: colors.neutral,
+        primary: {
+          400: '#F66451',
+          500: '#F4442E',
+          600: '#E9260C',
+        },
+        gray: {
+          400: '#A0A48E',
+          500: '#8E9277',
+          600: '#585B49',
+          700: '#424436',
+          800: '#2C2D24',
+          900: '#1D1E18',
+        },
       },
       typography: (theme) => ({
         DEFAULT: {

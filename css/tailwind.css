@@ -34,3 +34,14 @@ input:-webkit-autofill:focus {
     width: 96px;
   }
 }
+
+.fullpage-viewport {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.section {
+  justify-content: center;
+  align-items: center;
+}
