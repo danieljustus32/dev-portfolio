@@ -8,7 +8,6 @@ import formatDate from '@/lib/utils/formatDate'
 import NewsletterForm from '@/components/NewsletterForm'
 
 import React from 'react'
-import ReactDOM from 'react-dom'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 const MAX_DISPLAY = 5
@@ -34,6 +33,7 @@ export default function Home({ posts }) {
           licenseKey="0MK6J-V4N58-38HAJ-2VL78-SNZNP"
           credits={{ enabled: false }}
           pluginWrapper={pluginWrapper}
+          responsiveWidth={768}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>

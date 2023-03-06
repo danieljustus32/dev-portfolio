@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { useRouter } from 'next/router'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
+  const router = useRouter()
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
