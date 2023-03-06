@@ -34,25 +34,24 @@ const LayoutWrapper = ({ children }) => {
   }, [scrollY])
 
   useEffect(() => {
-    if (scrollY > 200) {
-      document.getElementById('navbar').classList.remove('md:py-10')
-      document.getElementById('navbar').classList.add('md:py-2')
+    let navbar = document.getElementById('navbar')
+    if (scrollY > 100) {
       Array.from(document.getElementsByClassName('shrink')).forEach(function (
         element,
         index,
         array
       ) {
+        navbar.classList.remove('py-10')
         element.classList.remove('md:scale-100')
         element.classList.add('md:scale-75')
       })
     } else {
-      document.getElementById('navbar').classList.remove('md:py-2')
-      document.getElementById('navbar').classList.add('md:py-10')
       Array.from(document.getElementsByClassName('shrink')).forEach(function (
         element,
         index,
         array
       ) {
+        navbar.classList.add('py-10')
         element.classList.remove('md:scale-75')
         element.classList.add('md:scale-100')
       })
@@ -63,7 +62,7 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header
-          className="fixed left-0 top-0 z-50 flex w-screen w-1/2 items-center justify-between px-12 py-10 backdrop-blur transition-all"
+          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between px-12 py-10 backdrop-blur transition-all"
           id="navbar"
         >
           <div>
@@ -83,7 +82,7 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden shrink">
+            <div className="shrink">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
