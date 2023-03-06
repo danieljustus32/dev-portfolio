@@ -28,7 +28,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       {/*// TODO - add react-fullpage*/}
-      <div className="fixed top-0 left-0 min-h-screen">
+      <div className="fullpage-viewport">
         <ReactFullpage
           //fullpage options
           licenseKey="0MK6J-V4N58-38HAJ-2VL78-SNZNP"
