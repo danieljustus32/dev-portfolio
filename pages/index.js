@@ -9,8 +9,7 @@ import NewsletterForm from '@/components/NewsletterForm'
 
 import React from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
-
-const MAX_DISPLAY = 5
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -39,7 +38,7 @@ export default function Home({ posts }) {
               <>
                 <ReactFullpage.Wrapper>
                   <div className="section active slide-one h-screen w-screen bg-gray-900">
-                    <div className="mt-96 flex flex-row rounded-md border border-gray-600 backdrop-blur md:flex-col md:px-4">
+                    <div className="mt-96 flex flex-row rounded-md border border-gray-600 backdrop-blur md:flex-col md:px-4 lg:mt-32">
                       <div className="Iam">
                         <p className="flex w-full">I'm Daniel. I'm a</p>
                         <b>
@@ -59,13 +58,16 @@ export default function Home({ posts }) {
                     </div>
                   </div>
                   <div className="section slide-two h-screen bg-gray-900">
-                    <p>Section 2</p>
+                    <div>
+                      <h1>{posts[0].title}</h1>
+                    </div>
                   </div>
                   <div className="section slide-three h-screen bg-gray-900">
-                    <p>Section 3</p>
                     {siteMetadata.newsletter.provider !== '' && (
-                      <div className="flex items-center justify-center pt-4">
-                        <NewsletterForm />
+                      <div className="mt-96 flex flex-row rounded-md border border-gray-600 py-4 backdrop-blur md:flex-col md:px-6">
+                        <div className="flex items-center justify-center pt-4">
+                          <NewsletterForm />
+                        </div>
                       </div>
                     )}
                   </div>
