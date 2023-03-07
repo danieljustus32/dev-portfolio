@@ -44,16 +44,17 @@ input:-webkit-autofill:focus {
 .section {
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .slide-one {
-  background-image: url('../public/static/images/slides/subway.jpg');
+  background-image: url('../public/static/images/slides/seattle-day.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .slide-two {
-  @apply bg-gray-900;
+  background-image: url('../public/static/images/slides/keyboard-black.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
