@@ -53,6 +53,7 @@ input:-webkit-autofill:focus {
   background-image: url('../public/static/images/slides/seattle-day.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 0em 1em;
 }
 
 .slide-two {
@@ -68,7 +69,7 @@ input:-webkit-autofill:focus {
 }
 
 .Iam {
-  padding: 2em 5em;
+  padding: 2em 2em;
   font: normal 40px/50px Vollkorn, serif;
   color: #fff;
 }
@@ -77,6 +78,14 @@ input:-webkit-autofill:focus {
   float: left;
   margin-right: 0.3em;
 }
+
+/* Fixes text-wrapping on phone screens */
+@media (max-width: 480px) {
+  .Iam p {
+    min-height: 95px;
+  }
+}
+
 .Iam b {
   float: left;
   overflow: hidden;
