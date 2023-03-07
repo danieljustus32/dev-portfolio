@@ -39,20 +39,20 @@ export default function Home({ posts }) {
               <>
                 <ReactFullpage.Wrapper>
                   <div className="section active slide-one h-screen w-screen bg-gray-900">
-                    <div className="rounded-md border border-gray-800 py-8 px-4 opacity-75 backdrop-blur">
+                    <div className="flex flex-col rounded-md border border-gray-800 px-4 backdrop-blur">
                       <div className="Iam">
-                        <p>This is</p>
+                        <p>I'm Daniel. I'm a</p>
                         <b>
                           <div class="innerIam">
-                            leggera
+                            coder.
                             <br />
-                            a theme in progress
+                            maker.
                             <br />
-                            built on bootstrap
+                            designer.
                             <br />
-                            how I learn stuff
+                            learner.
                             <br />
-                            how we do it
+                            writer.
                           </div>
                         </b>
                       </div>

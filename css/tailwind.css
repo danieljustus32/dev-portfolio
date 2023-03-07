@@ -82,11 +82,11 @@ input:-webkit-autofill:focus {
   overflow: hidden;
   position: relative;
   height: 50px;
-  top: 0px;
+  top: 1px;
 }
 .Iam .innerIam {
   display: inline-block;
-  color: #e74c3c;
+  color: #de1102;
   position: relative;
   white-space: nowrap;
   top: 0;
@@ -97,7 +97,7 @@ input:-webkit-autofill:focus {
   -moz-animation: move 5s;
   -ms-animation: move 5s;
   -o-animation: move 5s;
-  animation: move 5s;
+  animation: move 7s;
   /*animation-iteration-count*/
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
@@ -115,16 +115,16 @@ input:-webkit-autofill:focus {
   0% {
     top: 0px;
   }
-  20% {
+  25% {
     top: -50px;
   }
-  40% {
+  45% {
     top: -100px;
   }
-  60% {
+  65% {
     top: -150px;
   }
-  80% {
+  85% {
     top: -200px;
   }
 }
