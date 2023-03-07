@@ -43,7 +43,7 @@ export default function Home({ posts }) {
                       <div className="Iam">
                         <p className="flex w-full">I'm Daniel. I'm a</p>
                         <b>
-                          <div class="innerIam">
+                          <div className="innerIam">
                             coder.
                             <br />
                             maker.
