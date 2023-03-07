@@ -63,7 +63,7 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header
-          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between border-b border-zinc-800 px-12 backdrop-blur transition-all"
+          className="fixed left-0 top-0 z-50 flex w-screen items-center justify-between border-b border-gray-600 px-12 backdrop-blur transition-all"
           id="navbar"
         >
           <div>

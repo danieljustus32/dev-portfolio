@@ -39,8 +39,8 @@ export default function Home({ posts }) {
               <>
                 <ReactFullpage.Wrapper>
                   <div className="section active slide-one h-screen w-screen bg-gray-900">
-                    <div className="flex flex-col rounded-md border border-gray-800 px-4 backdrop-blur">
-                      <div className="Iam">
+                    <div className="flex flex-col rounded-md border border-gray-600 px-4 backdrop-blur">
+                      <div className="Iam font-serif">
                         <p>I'm Daniel. I'm a</p>
                         <b>
                           <div class="innerIam">
