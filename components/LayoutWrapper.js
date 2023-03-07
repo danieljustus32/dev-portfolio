@@ -36,27 +36,26 @@ const LayoutWrapper = ({ children }) => {
   useEffect(() => {
     let navbar = document.getElementById('navbar')
     if (scrollY > 50) {
-      Array.from(document.getElementsByClassName('shrink')).forEach(function (
-        element,
-        index,
-        array
-      ) {
-        navbar.classList.remove('py-10')
-        navbar.classList.add('py-1')
+      navbar.classList.remove('py-10')
+      navbar.classList.add('py-1')
+      Array.from(document.getElementsByClassName('shrink')).forEach(function (element) {
         element.classList.remove('md:scale-100')
         element.classList.add('md:scale-75')
       })
+      navbar.classList.remove('backdrop-blur')
+      navbar.classList.add('backdrop-blur')
     } else {
-      Array.from(document.getElementsByClassName('shrink')).forEach(function (
-        element,
-        index,
-        array
-      ) {
-        navbar.classList.remove('py-1')
-        navbar.classList.add('py-10')
+      navbar.classList.remove('py-1')
+      navbar.classList.add('py-10')
+      Array.from(document.getElementsByClassName('shrink')).forEach(function (element) {
         element.classList.remove('md:scale-75')
         element.classList.add('md:scale-100')
       })
+      navbar.classList.remove('backdrop-blur')
+      navbar.classList.add('backdrop-blur')
+      // Forces a re-render and fixes a bug with backdrop-blur not filling the updated bounds
+      // of the rectangle
+      navbar.replaceWith(navbar)
     }
   }, [scrollY])
 
