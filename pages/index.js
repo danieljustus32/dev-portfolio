@@ -40,8 +40,22 @@ export default function Home({ posts }) {
                 <ReactFullpage.Wrapper>
                   <div className="section active slide-one h-screen w-screen bg-gray-900">
                     <div className="rounded-md border border-gray-800 py-8 px-4 opacity-75 backdrop-blur">
-                      <h1 className="text-6xl">My name is Daniel</h1>
-                      <p>Some about me copy</p>
+                      <div className="Iam">
+                        <p>This is</p>
+                        <b>
+                          <div class="innerIam">
+                            leggera
+                            <br />
+                            a theme in progress
+                            <br />
+                            built on bootstrap
+                            <br />
+                            how I learn stuff
+                            <br />
+                            how we do it
+                          </div>
+                        </b>
+                      </div>
                     </div>
                   </div>
                   <div className="section slide-two h-screen bg-gray-900">
